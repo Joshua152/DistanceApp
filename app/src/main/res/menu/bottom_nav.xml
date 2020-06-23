@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/track_distance"
+        android:title="Track Distance"
+        android:icon="@drawable/track_asset"/>
+
+    <item
+        android:id="@+id/set_distance"
+        android:title="Set Distance"
+        android:icon="@drawable/set_location"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profile_asset"/>
+    
+</menu>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Distance</string>
+    <string name="action_timed">Timed Distance Mode</string>
+    <string name="start">Start</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="pref_key">prefKey1</string>
+    <string name="gps">GPS</string>
+    <string name="gps_description">Highest Accuracy\nFor Outdoor Use</string>
+    <string name="network">Network</string>
+    <string name="network_description">Medium Accuracy\nCan be Used Indoors</string>
+    <string name="passive">Passive</string>
+    <string name="passive_description">Lowest Accuracy\nExtra Power not Required</string>
+    <string name="provider">provider</string>
+    <string name="distance_array">distanceArray</string>
+    <string name="time_array">timeArray</string>
+    <string name="date_array">dateArray</string>
+    <string name="statsFileIO">statsFileIO.txt</string>
+    <string name="runs">Runs</string>
+    <string name="total_distance">totalDistance</string>
+    <string name="end_time">endTime</string>
+    <string name="end_distance">endDistance</string>
+</resources>
