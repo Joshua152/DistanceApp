@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity
 
     int color;
 
-    static double[] distanceArray;
+    static double[] distanceArray = new double[2];
     static double latitude;
     static double longitude;
 
@@ -106,8 +106,6 @@ public class MainActivity extends AppCompatActivity
         latitude = 0;
         longitude = 0;
 
-        distanceArray = new double[2];
-
         initFragment();
     }
 
@@ -140,7 +138,7 @@ public class MainActivity extends AppCompatActivity
 
         try
         {
-            locationManager.requestLocationUpdates(provider, 2, 4, locationListener);
+            locationManager.requestLocationUpdates(provider, 0, 2, locationListener);
         }
         catch(Exception e)
         {

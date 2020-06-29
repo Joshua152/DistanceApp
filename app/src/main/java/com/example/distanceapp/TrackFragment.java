@@ -67,7 +67,7 @@ public class TrackFragment extends Fragment
     HashSet<String> hsTime;
     HashSet<String> hsDate;
 
-    double distanceArray[] = new double[2];
+ //   double distanceArray[] = new double[2];
 
     static double mph;
 
@@ -227,8 +227,8 @@ public class TrackFragment extends Fragment
                     distance.setText("0.00 miles");
                     totalDistance = 0;
 
-                    distanceArray[1] = 0;
-                    distanceArray[0] = 0;
+                    MainActivity.distanceArray[1] = 0;
+                    MainActivity.distanceArray[0] = 0;
 
                     mph = 0;
 
@@ -272,16 +272,16 @@ public class TrackFragment extends Fragment
 
     public void updateSpeed()
     {
-        if (distanceArray[0] != 0)
+        if (MainActivity.distanceArray[0] != 0)
         {
-            double distanceDif = distanceArray[1] - distanceArray[0];
+            double distanceDif = MainActivity.distanceArray[1] - MainActivity.distanceArray[0];
             mph = distanceDif * 1800;
 
-            arraycopy(distanceArray, 1, distanceArray, 0, 1);
+            arraycopy(MainActivity.distanceArray, 1, MainActivity.distanceArray, 0, 1);
         }
         else
         {
-            arraycopy(distanceArray, 1, distanceArray, 0, 1);
+            arraycopy(MainActivity.distanceArray, 1, MainActivity.distanceArray, 0, 1);
         }
 
         speedHandler.post(speedRunnable);

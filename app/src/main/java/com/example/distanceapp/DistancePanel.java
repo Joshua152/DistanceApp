@@ -52,7 +52,6 @@ public class DistancePanel
 
         if(latArray[0] != 0 && longArray[0] != 0)
         {
-
             lat1 = latArray[0];
             long1 = longArray[0];
             lat2 = latArray[1];
