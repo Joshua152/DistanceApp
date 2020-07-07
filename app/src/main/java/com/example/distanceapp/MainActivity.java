@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity
     {
         init();
 
-        setColors();
+        setColors(this, color);
 
         startLocation();
     }
@@ -121,10 +121,10 @@ public class MainActivity extends AppCompatActivity
         transaction.commit();
     }
 
-    public void setColors()
+    public static void setColors(Context context, int color)
     {
-        toolbar.setBackgroundColor(ContextCompat.getColor(this, color));
-        bottomNav.setBackgroundColor(ContextCompat.getColor(this, color));
+        toolbar.setBackgroundColor(ContextCompat.getColor(context, color));
+        bottomNav.setBackgroundColor(ContextCompat.getColor(context, color));
     }
 
     public void startLocation()

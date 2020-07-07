@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
@@ -43,6 +44,7 @@ public class TrackFragment extends Fragment
     Display display;
     Point point;
 
+    Toolbar toolbar;
     BottomNavigationView bottomNav;
 
     DecimalFormat format = new DecimalFormat("0.0");
@@ -120,7 +122,6 @@ public class TrackFragment extends Fragment
         mainActivity = new MainActivity();
         setActivity = new SetFragment();
 
-        bottomNav = (BottomNavigationView)view.findViewById(R.id.bottom_navigation);
         distanceBackground = (ImageView)view.findViewById(R.id.distance_background);
         speedBackground = (ImageView)view.findViewById(R.id.speed_background);
         timeBackground = (ImageView)view.findViewById(R.id.time_background);
@@ -152,6 +153,7 @@ public class TrackFragment extends Fragment
 
     public void setColors()
     {
+        MainActivity.setColors(context, color);
         distanceBackground.setBackgroundColor(ContextCompat.getColor(context, color));
         speedBackground.setBackgroundColor(ContextCompat.getColor(context, color));
         timeBackground.setBackgroundColor(ContextCompat.getColor(context, color));

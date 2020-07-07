@@ -102,6 +102,7 @@ public class SettingsActivity extends AppCompatActivity
     {
         getSupportFragmentManager().popBackStack("Profile", 0);
         onBackPressed();
+        ProfileFragment.changeColor(color);
 
         return true;
     }

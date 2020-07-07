@@ -150,6 +150,7 @@ public class SetFragment extends Fragment
 
     public void setColors()
     {
+        MainActivity.setColors(context, color);
         distanceCircle.setColorFilter(ContextCompat.getColor(context, color));
         speedCircle.setColorFilter(ContextCompat.getColor(context, color));
         timeCircle.setColorFilter(ContextCompat.getColor(context, color));

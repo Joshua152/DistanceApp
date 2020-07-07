@@ -149,8 +149,8 @@ public class CompleteActivity extends AppCompatActivity
                 .setPositiveButton("Discard", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        float distance = intentGet.getFloatExtra(getString(R.string.end_distance), 0f);
-                        float totalDistance = preferences.getFloat(getString(R.string.total_distance), 0f);
+                        float distance = intentGet.getFloatExtra(getString(R.string.end_distance), 0.0f);
+                        float totalDistance = preferences.getFloat(getString(R.string.total_distance), 0.0f);
                         editor.putFloat(getString(R.string.total_distance), distance + totalDistance);
 
                         Intent intent = new Intent(CompleteActivity.this, MainActivity.class);

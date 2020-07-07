@@ -28,7 +28,7 @@ import java.util.ArrayList;
 
 public class ProfileFragment extends Fragment
 {
-    Context context;
+    static Context context;
     
     SharedPreferences preferences;
     BufferedReader reader;
@@ -78,6 +78,12 @@ public class ProfileFragment extends Fragment
 
         recyclerView.setLayoutManager(recyclerViewLayoutManager);
         recyclerView.setAdapter(recyclerViewAdapter);
+    }
+
+    public static void changeColor(int color)
+    {
+        MainActivity.setColors(context, color);
+        RecyclerViewAdapter.setColors(context, color);
     }
 
     public void instantiateFileIO()
@@ -173,11 +179,11 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     int color;
 
-    class HeaderViewHolder extends RecyclerView.ViewHolder
+    static class HeaderViewHolder extends RecyclerView.ViewHolder
     {
-        TextView tvDistance;
-        TextView tvDistanceText;
-        TextView tvRunsText;
+        static TextView tvDistance;
+        static TextView tvDistanceText;
+        static TextView tvRunsText;
 
         public HeaderViewHolder(View itemView)
         {
@@ -186,6 +192,12 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             tvDistance = (TextView) itemView.findViewById(R.id.total_miles);
             tvDistanceText = (TextView) itemView.findViewById(R.id.total_text);
             tvRunsText = (TextView) itemView.findViewById(R.id.runs_text);
+        }
+
+        public static void changeColor(Context context, int color)
+        {
+            tvDistance.setTextColor(ContextCompat.getColor(context, color));
+            tvRunsText.setTextColor(ContextCompat.getColor(context, color));
         }
     }
 
@@ -266,5 +278,10 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public int getItemCount()
     {
         return dateArray.length + 1;
+    }
+
+    public static void setColors(Context context, int color)
+    {
+        HeaderViewHolder.changeColor(context, color);
     }
 }
