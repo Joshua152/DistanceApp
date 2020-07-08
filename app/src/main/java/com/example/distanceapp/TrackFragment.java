@@ -269,7 +269,11 @@ public class TrackFragment extends Fragment
 
     public void setCoordinates(String coordinates)
     {
-        coordinate.setText(coordinates);
+        try
+        {
+            coordinate.setText(coordinates);
+        }
+        catch(Exception e){}
     }
 
     public void updateSpeed()
